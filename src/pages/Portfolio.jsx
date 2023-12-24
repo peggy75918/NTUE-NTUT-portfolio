@@ -14,7 +14,7 @@ function Portfolio({ data, school }) {
 
     const sc = useParams();
     const navigate = useNavigate(); // 沒有刷新網頁的情況下更新連結
-    const [ schoolIndex, setSchoolIndex ] = useState( sc==="NTUE"? 0 : 1 ); // 0=NTUE 1=NTUT
+    const [ schoolIndex, setSchoolIndex ] = useState( sc==="NTUT"? 1 : 0 ); // 0=NTUE 1=NTUT
 
     return (
         <>
@@ -23,7 +23,7 @@ function Portfolio({ data, school }) {
                 < PortfolioBar 
                     getIndex={ schoolIndex }
                     updateNTUE={ () => {setSchoolIndex(0); navigate('/ntue/112-1', { replace: true });} } 
-                    updateNTUT={ () => {setSchoolIndex(1); navigate('/ntut/112-1', { replace: true });} }
+                    updateNTUT={ () => {setSchoolIndex(1); navigate('/ntut/111-2', { replace: true });} }
                 />
             
             </header>
