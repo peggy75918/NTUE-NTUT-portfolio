@@ -23,7 +23,7 @@ function Portfolio({ data, school }) {
                 < PortfolioBar 
                     getIndex={ schoolIndex }
                     updateNTUE={ () => {setSchoolIndex(0); navigate('/ntue/112-1', { replace: true });} } 
-                    updateNTUT={ () => {setSchoolIndex(1); navigate('/ntut/111-2', { replace: true });} }
+                    updateNTUT={ () => {setSchoolIndex(1); navigate('/ntut/112-1', { replace: true });} }
                 />
             
             </header>
