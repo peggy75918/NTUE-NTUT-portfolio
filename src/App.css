@@ -1,0 +1,762 @@
+*:focus {outline:none !important}
+
+.container {
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100%;
+  margin: auto;
+}
+
+/* sm */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* lg */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+/* xxl */
+@media (min-width: 1600px) {
+  .container {
+    width: 1500px;
+  }
+}
+
+/* ========== 載入 ========== */
+.loading-base {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-base .warpper {
+  position: relative;
+}
+
+.loading-base p {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #88B8F2;
+  font-weight: 500;
+}
+
+/* ========== 首頁 ========== */
+#homebar-header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+  z-index: 1;
+}
+
+.homebar-base {
+  background: #27005D;
+
+  width: 100vw;
+  height: 69px;
+  max-width: 100%; 
+}
+
+.container.homebar {
+  justify-content: center;
+
+  color: white;
+  font-size: 24px;
+}
+
+.container.homebody {
+  margin-top: 30px;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 991px) {
+  .container.homebody {
+    flex-wrap: wrap;
+  }
+}
+
+.homeleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 60%;
+
+  color: black;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.homeleft p {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.homebtn-base {
+  display: flex;
+  flex-direction: row;
+}
+
+.homebtn-frame {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px 8px 8px;
+  border: #27005D;
+  border-radius: 100px;
+  border-style: solid;
+
+  background-color: white;
+  color: #27005D;
+  text-align: center;
+  margin-right: 14px;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.homebtn-logo {
+  width: 50px;
+}
+
+.homebtn-frame:hover {
+  color: white;
+  background-color: #27005D;
+}
+
+.homebtn-frame:active {
+  color: white;
+  background-color: #27005dca;
+}
+
+.homeright {
+  display: flex;
+  position: absolute;
+  right: 0px;
+}
+
+.homeimg {
+  width: 50vw;
+  max-width: 500px;
+}
+
+@media (min-width: 1600px) {
+  .homeleft {
+    font-size: 90px;
+  }
+  
+  .homebtn-frame {
+    padding: 16px 30px 16px 16px;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+
+  .homeimg {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .homeleft {
+    width: 100%;
+  }
+  
+  .homeright {
+    position: static;
+    width: 100%;
+  }
+
+  .homeimg {
+    width: auto;
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .homeleft {
+    font-size: 56px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeright {
+    justify-content: center; 
+  }
+}
+
+/* ========== 作品頁 ========== */
+.container.portbar {
+  margin: 0;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 36px;
+}
+
+#port-header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+  z-index: 3;
+}
+
+.portbar-base {
+  background: #27005D;
+
+  width: 100vw;
+  height: 69px;
+  max-width: 100%;
+}
+
+.portbar-home-base {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 575px) {
+  .portbar-home-base {
+    font-size: 20px;
+  }
+}
+
+.portbar-home-icon {
+  margin-right: 10px;
+}
+
+
+.portbar-school-base {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+.portbar-school-base input[type=checkbox] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+/* 白底 */
+.portbar-school-base label {
+	cursor: pointer;
+	width: 80px;
+	height: 40px;
+	background: white;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+/* 藍球 */
+.portbar-school-base label:before {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background-color: #7F9DEB;
+	border-radius: 90px;
+	transition: 0.3s;
+
+  content: '';
+  background-image: url(components/img/logo-ntue.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+/* 藍球被按後變大 */
+.portbar-school-base label:active:before {
+	width: 40px;
+}
+
+/* 藍球去右邊 */
+.portbar-school-base input:checked + label:before {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+
+  background-image: url(components/img/logo-ntut.svg);
+}
+
+#port-content {
+  flex-direction: column;
+}
+
+.portsidemenu-base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+
+  background-color: white;
+  filter: drop-shadow(2px 0px 10px rgba(0, 0, 0, 0.1));
+  z-index: 2;
+}
+
+.portsidemenu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  gap: 30px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #27005D;
+
+  cursor: pointer;
+}
+
+.portsidemenu-btn:hover {
+  color: #27005dca;
+}
+
+.portsidemenu-btn.topMode {
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.portsidemenu-search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portsidemenu-search-base {
+  width: 70vw;
+  max-width: 700px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #27005D;
+
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+
+  transition: all 1s;
+}
+
+.portsidemenu-search-base input[type=text] {
+  background-color: #EDEDED;
+  padding: 4px;
+  border: 0;
+  border-radius: 100px;
+  width: 80%;
+
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color:#27005D;
+}  
+
+.portfilter-base {
+  z-index: 1;
+  background-color: white;
+  filter: drop-shadow(2px 0px 10px rgba(0, 0, 0, 0.1));
+  
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 69px;
+
+  display: flex;
+  padding-left: 240px;
+  padding-right: 16px;
+}
+
+.portfilter-container {
+  margin: 10px;
+  margin-left: 20px;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.portfilter-container input[type=checkbox] {
+	height: 0;
+	width: 0;
+	display: none;
+}
+
+.portfilter-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #EDEDED;
+
+  height: 40px;
+  width: 140px;
+  font-size: 20px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.portfilter-container label:hover {
+  background-color: #7F9DEB;
+  color: white;
+}
+
+.portfilter-container input:checked + label {
+  background-color: #27005D;
+  color: white;
+}
+
+.portfilter-container input:checked + label:hover {
+  background-color: #7F9DEB;
+  color: white;
+}
+
+.portright {
+  width: auto;
+  padding-left: 260px;
+  padding-right: 36px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.portsidemenu-topMode {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .portsidemenu-base {
+    display: none;
+  }
+
+  .portsidemenu-topMode {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 69px;
+    z-index: 1;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    height: 60px;
+    background-color: white;
+    filter: drop-shadow(2px 0px 10px rgba(0, 0, 0, 0.1));
+  }
+
+  .portsidemenu-topMode-cat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .portsidemenu-topMode-cat:hover {
+    color: #27005dca;
+  }
+
+  .portsidemenu-topMode-base {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .portsidemenu-topMode-base input[type=text] {
+    background-color: #EDEDED;
+    padding: 4px;
+    border: 0;
+    border-radius: 5px;
+    width: 70%;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color:#27005D;
+  }  
+
+  .portfilter-base {
+    display: none;
+  }
+
+  .portright {
+    padding-left: 20px;
+  }
+}
+
+
+@media screen and (max-width: 991px) and (min-width: 576px) {
+  .portsidemenu-base {
+    width: 80px;
+  }
+
+  .portsidemenu-btn-text {
+    display: none;
+  }
+  
+  .portsidemenu-hoverable:hover {
+    background-color: #27005D;
+    width: 80px;
+    cursor: 'pointer',
+  }
+
+  .portsidemenu-hoverable:hover .portsidemenu-btn-text {
+    display: block;
+    font-size: 16px;
+    color: white;
+  }
+
+  .portsidemenu-hoverable:hover .icon {
+    display: none;
+  }
+
+  .portfilter-base {
+    padding-left: 80px;
+  }
+
+  .portright {
+    padding-left: 100px;
+  }
+}
+
+.portwork-base {
+  border-radius: 10px;
+  background-color: white;  
+  padding: 16px;
+
+  filter: drop-shadow(2px 0px 10px rgba(0, 0, 0, 0.1));
+}
+
+.portwork-frame {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  position: relative;
+}
+
+.portwork-view {
+  position: absolute;
+  width: max-content;
+  padding: 4px;
+  font-size: 18px;
+
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+  color: #7F9DEB;
+}
+
+.portwork-imgframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #F4F4F4;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+}
+
+.portwork-imgframe img{
+  height: 100%;
+  width: 100%;
+}
+
+.portwork-imgframe-NTUE {
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.portwork-imgframe-NTUT {
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.portwork-imgframe-IMG {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portwork-info-base {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: fit-content;
+}
+
+.portwork-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 8px;
+  
+  line-height: normal;
+}
+
+.portwork-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0px;
+
+  color: #27005D;
+}
+
+.portwork-team {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0px;
+
+  color: #7F9DEB;
+}
+
+.portwork-tagrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portwork-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #EDEDED;
+
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.port-work-info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.portwork-icons {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 24px;
+  color: #27005D;
+}
+
+.portwork-hearts {
+  color: #e77474;
+  font-size: 18px;
+  width: max-content;
+
+  cursor: pointer;
+}
+
+/* ---------- ----------*/
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
